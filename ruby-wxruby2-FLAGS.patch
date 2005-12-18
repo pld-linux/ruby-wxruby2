@@ -1,0 +1,11 @@
+--- wxruby2/rakefile~	2005-12-18 18:00:42.882907248 +0100
++++ wxruby2/rakefile	2005-12-18 21:18:09.329540280 +0100
+@@ -10,7 +10,7 @@
+ # overridden by platform-specific rake files
+ $dl_ext = Config::CONFIG["DLEXT"]
+ $obj_ext = Config::CONFIG["OBJEXT"]
+-$ruby_cppflags = Config::CONFIG["CFLAGS"]
++$ruby_cppflags = Config::CONFIG["CFLAGS"].gsub(/-march=\S*/, "").gsub(/-O\S*/, "") + " #{ENV['CXXFLAGS']}" #XXX: should be ruby_cxxflags
+ $ruby_includes = " -I " + $:.join(' -I ')
+ $ruby_ldflags = Config::CONFIG["LDFLAGS"]
+ $ruby_libs  = Config::CONFIG["LIBS"]
