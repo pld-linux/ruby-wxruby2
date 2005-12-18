@@ -1,0 +1,11 @@
+--- wxruby2/rake/rakewx.rb	2005-08-22 06:25:43.000000000 +0200
++++ wxruby2/rake/rakewx.rb	2005-12-18 20:38:08.406091064 +0100
+@@ -31,7 +31,7 @@
+ end
+ 
+ def wx_config(opt)
+-    return `wx-config #{opt}`.strip + " "
++    return `wx-gtk2-unicode-config #{opt}`.strip + " "
+ end
+ 
+ def use_wx_config
