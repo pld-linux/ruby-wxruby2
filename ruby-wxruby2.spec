@@ -4,6 +4,7 @@
 %define _cvs	20051218	
 #
 Summary:	Ruby bindings for wxWidgets
+Summary(pl):	Wi±zania Ruby dla wxWidgets
 Name:		ruby-%{_pnam}
 Version:	0.3.0
 Release:	0.%{_cvs}.%{_rel}
@@ -23,12 +24,18 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Ruby bindings for wxWidgets.
 
+%description -l pl
+Wi±zania Ruby dla wxWidgets.
+
 %package examples
 Summary:	Ruby bindings for wxWidgets examples
 Group:		X11/Libraries
 
 %description examples
 Ruby bindings for wxWidgets examples.
+
+%description examples -l pl
+Wi±zania Ruby dla wxWidgets - przyk³ady.
 
 %prep
 %setup -q -n %{_pnam}
@@ -43,13 +50,13 @@ CXXFLAGS="%{rpmcxxflags}" rake
 rm -rf $RPM_BUILD_ROOT
 
 # `rake install' is broken - puts both wx.rb and wxruby2.so in ruby_sitearchdir
-install -d $RPM_BUILD_ROOT/%{_examplesdir}/%{name}-%{version}
+install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 install -d $RPM_BUILD_ROOT{%{ruby_sitelibdir},%{ruby_sitearchdir}}
 
 install lib/wx.rb $RPM_BUILD_ROOT%{ruby_sitelibdir}
 install lib/wxruby2.so $RPM_BUILD_ROOT%{ruby_sitearchdir}
 
-cp -R samples/* $RPM_BUILD_ROOT/%{_examplesdir}/%{name}-%{version} 
+cp -R samples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version} 
 
 %clean
 rm -rf $RPM_BUILD_ROOT
