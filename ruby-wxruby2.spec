@@ -29,6 +29,7 @@ Wi±zania Ruby dla wxWidgets.
 
 %package examples
 Summary:	Ruby bindings for wxWidgets examples
+Summary(pl):	Przyk³ady do wi±zañ jêzyka Ruby do wxWidgets
 Group:		X11/Libraries
 
 %description examples
@@ -64,8 +65,8 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changelog LICENSE README TODO
-%{ruby_sitelibdir}/*
-%{ruby_sitearchdir}/*
+%{ruby_sitelibdir}/*.rb
+%attr(755,root,root) %{ruby_sitearchdir}/*.so
 
 %files examples
 %defattr(644,root,root,755)
