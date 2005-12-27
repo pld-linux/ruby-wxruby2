@@ -1,6 +1,6 @@
 #
 %define	_pnam	wxruby2
-%define	_rel	0.1
+%define	_rel	0.2
 %define _cvs	20051218	
 #
 Summary:	Ruby bindings for wxWidgets
@@ -17,7 +17,7 @@ Patch1:		%{name}-wx-config.patch
 Patch2:		%{name}-FLAGS.patch
 URL:		http://wxruby.rubyforge.org/
 BuildRequires:	rake
-BuildRequires:	ruby
+BuildRequires:	ruby-devel
 BuildRequires:	wxWidgets-devel >= 2.6.2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
