@@ -16,9 +16,11 @@ Source0:	http://twittner.host.sk/files/wxruby2/%{_pnam}-%{version}-cvs-%{_cvs}.t
 Patch1:		%{name}-wx-config.patch
 Patch2:		%{name}-FLAGS.patch
 URL:		http://wxruby.rubyforge.org/
+BuildRequires:	rpmbuild(macros) >= 1.277
 BuildRequires:	rake
 BuildRequires:	ruby-devel
 BuildRequires:	wxWidgets-devel >= 2.6.2
+%ruby_mod_ver_requires_eq
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
