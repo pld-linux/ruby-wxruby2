@@ -20,7 +20,7 @@ BuildRequires:	rpmbuild(macros) >= 1.277
 BuildRequires:	rake
 BuildRequires:	ruby-devel
 BuildRequires:	wxWidgets-devel >= 2.6.2
-%ruby_mod_ver_requires_eq
+%{?ruby_mod_ver_requires_eq}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
