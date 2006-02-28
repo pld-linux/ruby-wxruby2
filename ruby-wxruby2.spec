@@ -1,7 +1,7 @@
 #
 %define	_pnam	wxruby2
 %define	_rel	0.2
-%define _cvs	20051218	
+%define _cvs	20051218
 #
 Summary:	Ruby bindings for wxWidgets
 Summary(pl):	Wi±zania Ruby dla wxWidgets
@@ -16,8 +16,8 @@ Source0:	http://twittner.host.sk/files/wxruby2/%{_pnam}-%{version}-cvs-%{_cvs}.t
 Patch1:		%{name}-wx-config.patch
 Patch2:		%{name}-FLAGS.patch
 URL:		http://wxruby.rubyforge.org/
-BuildRequires:	rpmbuild(macros) >= 1.277
 BuildRequires:	rake
+BuildRequires:	rpmbuild(macros) >= 1.277
 BuildRequires:	ruby-devel
 BuildRequires:	wxWidgets-devel >= 2.6.2
 %{?ruby_mod_ver_requires_eq}
@@ -59,7 +59,7 @@ install -d $RPM_BUILD_ROOT{%{ruby_sitelibdir},%{ruby_sitearchdir}}
 install lib/wx.rb $RPM_BUILD_ROOT%{ruby_sitelibdir}
 install lib/wxruby2.so $RPM_BUILD_ROOT%{ruby_sitearchdir}
 
-cp -R samples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version} 
+cp -R samples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
