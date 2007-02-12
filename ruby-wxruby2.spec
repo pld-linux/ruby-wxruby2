@@ -4,7 +4,7 @@
 %define _cvs	20051218
 #
 Summary:	Ruby bindings for wxWidgets
-Summary(pl):	Wi±zania Ruby dla wxWidgets
+Summary(pl.UTF-8):   WiÄ…zania Ruby dla wxWidgets
 Name:		ruby-%{_pnam}
 Version:	0.3.0
 Release:	0.%{_cvs}.%{_rel}
@@ -26,19 +26,19 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Ruby bindings for wxWidgets.
 
-%description -l pl
-Wi±zania Ruby dla wxWidgets.
+%description -l pl.UTF-8
+WiÄ…zania Ruby dla wxWidgets.
 
 %package examples
 Summary:	Ruby bindings for wxWidgets examples
-Summary(pl):	Przyk³ady do wi±zañ jêzyka Ruby do wxWidgets
+Summary(pl.UTF-8):   PrzykÅ‚ady do wiÄ…zaÅ„ jÄ™zyka Ruby do wxWidgets
 Group:		X11/Libraries
 
 %description examples
 Ruby bindings for wxWidgets examples.
 
-%description examples -l pl
-Wi±zania Ruby dla wxWidgets - przyk³ady.
+%description examples -l pl.UTF-8
+WiÄ…zania Ruby dla wxWidgets - przykÅ‚ady.
 
 %prep
 %setup -q -n %{_pnam}
